@@ -26,14 +26,17 @@ brew tap homebrew/cask-fonts
 brew cask install font-hack
 
 # Alacritty
-## setup terminfo first
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
+which alacritty 1>&/dev/null
+if [ ! "$?" -eq 0 ] ; then
+  ## setup terminfo first
+  git clone https://github.com/alacritty/alacritty.git
+  cd alacritty
 
-## setup terminfo
-sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+  ## setup terminfo
+  sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
 
-## cleanup
-cd .. && rm -rf alacritty
+  ## cleanup
+  cd .. && rm -rf alacritty
 
-brew cask install alacritty
+  brew cask install alacritty
+fi
