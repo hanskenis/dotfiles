@@ -40,3 +40,9 @@ if [ ! "$?" -eq 0 ] ; then
 
   brew cask install alacritty
 fi
+
+# asdf
+brew install asdf
+
+# lua
+brew install lua
