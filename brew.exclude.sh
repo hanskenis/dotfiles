@@ -46,3 +46,6 @@ brew install asdf
 
 # lua
 brew install lua
+
+# starship
+brew install starship
